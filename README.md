@@ -1,4 +1,5 @@
 # algorigame
+[![Build Status](https://travis-ci.com/zjhl2/algorigame.svg?branch=master)](https://travis-ci.com/zjhl2/algorigame)
 
 ## Project setup
 ```
