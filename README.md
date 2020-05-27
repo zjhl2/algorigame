@@ -1,32 +1,30 @@
 # algorigame
 [![Build Status](https://travis-ci.com/zjhl2/algorigame.svg?branch=master)](https://travis-ci.com/zjhl2/algorigame)
 
-## Project setup
+Learning algorithms through games
+
+## Install
+
+ Project setup
 ```
 yarn install
 ```
 
-### Compiles and hot-reloads for development
+## Usage
+
+### Serve through yarn (with Node.js)
+Compiles and hot-reloads for development
 ```
 yarn serve
 ```
 
-### Compiles and minifies for production
+Compiles and minifies for production
 ```
 yarn build
 ```
 
-### Lints and fixes files
-```
-yarn lint
-```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
-
-
-## Use Docker
-
+### Serve through Docker
 
 ```shell
 docker run -p 8080:80 -d -P --rm zjhl2/algorigame:1.0
