@@ -6,11 +6,13 @@ services:
 script:
   - yarn build
 before_deploy:
-  - docker build -t zjhl2/algorigame:latest .
+  - version = $(git rev-parse --short HEAD)
+  - docker build -t zjhl2/algorigame:latest . -t zjhl2/algorigame:$version
   - docker run -p 8080:80 -d -P --rm zjhl2/algorigame:latest
   - docker ps -a
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   - docker push zjhl2/algorigame:latest
+  - docker push docker.io/zjhl2/algorigame:$version
 deploy:
     provider: pages
     skip_cleanup: true
