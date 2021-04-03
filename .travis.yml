@@ -1,9 +1,16 @@
 language: node_js # node环境
 node_js:
   - lts/*
+services:
+  - docker
 script:
   - yarn build
-
+before_deploy:
+  - docker build -t zjhl2/algorigame:latest .
+  - docker run -p 8080:80 -d -P --rm zjhl2/algorigame:latest
+  - docker ps -a
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+  - docker push zjhl2/algorigame:latest
 deploy:
     provider: pages
     skip_cleanup: true
