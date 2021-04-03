@@ -6,7 +6,7 @@ services:
 script:
   - yarn build
 before_deploy:
-  - version = $(git rev-parse --short HEAD)
+  - version=$(git rev-parse --short HEAD)
   - docker build -t zjhl2/algorigame:latest . -t zjhl2/algorigame:$version
   - docker run -p 8080:80 -d -P --rm zjhl2/algorigame:latest
   - docker ps -a
