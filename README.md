@@ -27,7 +27,7 @@ yarn build
 ### Serve through Docker
 
 ```shell
-docker run -p 8080:80 -d -P --rm zjhl2/algorigame:1.0
+docker run -p 8080:80 -d -P --rm zjhl2/algorigame:latest
 ```
 
 After few seconds, open http://localhost:8080 to see the page.
