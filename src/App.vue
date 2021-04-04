@@ -9,7 +9,7 @@
         </a-menu-item>
         <a-menu-item key="2">
           <a-icon type="desktop" />
-          <span>to be updated...</span>
+          <span>to be updated</span>
         </a-menu-item>
       </a-menu>
     </a-layout-sider>
